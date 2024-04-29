@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MARSDK_JPUSH'
-  s.version          = '5.0'
+  s.version          = '5.0.1'
   s.summary          = '火星人打包工具'
 
 
@@ -14,6 +14,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/lizhigang6/MARSDK_JPUSH.git', :tag => s.version.to_s }
   s.vendored_libraries =  'MARSDK_JPUSH/SDK/*'
   s.ios.deployment_target = '12.0'
+  s.frameworks = "CFNetwork","CoreFoundation","CoreTelephony","SystemConfiguration","CoreGraphics","Foundation","UIKit","Security","UserNotifications","WebKit","StoreKit"
+  s.ios.library = "z","resolv"
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }  
 
 end
